@@ -22,7 +22,7 @@ The Meeting-Service app, supports rest api like
    Method : POST
    Sample Request:
      
-   {"emailIds":["bhavesh@lowes.com"]}
+   {"emailIds":["xyz@abc.com"]}
    
    
    In Scope:
