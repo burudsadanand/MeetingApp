@@ -28,24 +28,21 @@ public class CheckEmployeeCalendorAvaibilityTask implements Callable<ResponseBea
         Boolean isEmployeeAvailable=false;
         prepareResponseBean(scheduleMeetingResponseBean);
         isEmployeeAvailable=checkEmployeesAvailability(meetingRoomRequestBean,isEmployeeAvailable,scheduleMeetingResponseBean);
-        if(isEmployeeAvailable){
-            BaseResponse baseResponse=new BaseResponse();
-            baseResponse.setStatus(Status.SUCCESS);
-            Meta meta= new Meta();
-            meta.setStatus(Status.SUCCESS);
-            scheduleMeetingResponseBean.setErrorResponse(baseResponse);
-            scheduleMeetingResponseBean.setMeta(meta);
-            return scheduleMeetingResponseBean;
-        }else{
-            BaseResponse baseResponse=new BaseResponse();
-            baseResponse.setStatus(Status.FAILURE);
-            Meta meta= new Meta();
-            meta.setStatus(Status.FAILURE);
-            scheduleMeetingResponseBean.setErrorResponse(baseResponse);
-            scheduleMeetingResponseBean.setMeta(meta);
-            return scheduleMeetingResponseBean;
+        return  buildResponse(scheduleMeetingResponseBean,isEmployeeAvailable);
+    }
 
+    private  ResponseBean<ScheduleMeetingResponseBean> buildResponse(ResponseBean<ScheduleMeetingResponseBean> scheduleMeetingResponseBean,
+                                                                     Boolean isEmployeeAvailable) {
+        BaseResponse baseResponse=new BaseResponse();
+        Meta meta= new Meta();
+        meta.setStatus(Status.SUCCESS);
+        baseResponse.setStatus(Status.SUCCESS);
+        if(!isEmployeeAvailable){
+            baseResponse.setStatus(Status.FAILURE);
         }
+        scheduleMeetingResponseBean.setErrorResponse(baseResponse);
+        scheduleMeetingResponseBean.setMeta(meta);
+        return scheduleMeetingResponseBean;
     }
 
     private Boolean checkEmployeesAvailability(MeetingRoomRequestBean meetingRoomRequestBean,

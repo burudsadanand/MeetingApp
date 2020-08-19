@@ -1,0 +1,52 @@
+[{
+  "employeeId": 123412131,
+  "firstName": "Akansha",
+  "lastName": "Verma",
+  "contact": {
+    "mobileNumber1": 928232321121,
+    "officeNumber": 803231231212,
+    "isdCode": 91,
+    "personalEmailId": "askansh@gmail.com",
+    "officialEmailId": "akansha@lowes.com"
+  },
+  "address": {
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "pinCode": "560063",
+    "country": "India"
+  }
+}, {
+  "employeeId": 123412136,
+  "firstName": "Vignesh",
+  "lastName": "S",
+  "contact": {
+    "mobileNumber1": 53232321121,
+    "officeNumber": 8021651231212,
+    "isdCode": 91,
+    "personalEmailId": "vignesh@gmail.com",
+    "officialEmailId": "vignesh@lowes.com"
+  },
+  "address": {
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "pinCode": "560063",
+    "country": "India"
+  }
+}, {
+  "employeeId": 123412134,
+  "firstName": "Bhavesh",
+  "lastName": "S",
+  "contact": {
+    "mobileNumber1": 123232321121,
+    "officeNumber": 805221231212,
+    "isdCode": 91,
+    "personalEmailId": "bhavesh@gmail.com",
+    "officialEmailId": "bhavesh@lowes.com"
+  },
+  "address": {
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "pinCode": "560063",
+    "country": "India"
+  }
+}]

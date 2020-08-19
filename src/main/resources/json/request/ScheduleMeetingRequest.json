@@ -10,19 +10,21 @@
   "toDate": "2020-08-20",
   "fromTime": "2020-08-20",
   "toTime": "2020-08-20",
+  "creationDate":"2020-08-20",
   "slot": {
     "from": "11:00",
     "to": "12:00"
   },
-  "addressBean": {
+  "addressLocation": {
     "city": "Bangalore",
     "state": "Karnataka",
     "pinCode": "560078",
     "country": "India"
   },
-  "employeeBeanList": [{
+  "attendees": [{
     "firstName": "Bhavesh",
     "lastName": "S",
+    "employeeId": 123412134,
     "contactBean": {
       "mobileNumber1": 9186453212,
       "officeNumber": 8084232332212,
@@ -31,14 +33,15 @@
       "officialEmailId": "bhavesh@lowes.com"
     }
   }, {
-    "firstName": "Bhavesh",
+    "firstName": "Vignesh",
     "lastName": "S",
+    "employeeId": 123412136,
     "contactBean": {
-      "mobileNumber1": 9186453212,
-      "officeNumber": 8084232332212,
+      "mobileNumber1": 9321453212,
+      "officeNumber": 53232332212,
       "isdCode": 91,
-      "personalEmailId": "bhavesh@gmail.com",
-      "officialEmailId": "bhavesh@lowes.com"
+      "personalEmailId": "vignesh@gmail.com",
+      "officialEmailId": "vignesh@lowes.com"
     }
   }],
   "meetingTitle": "Interview|Lead Engineer| Program Assignmenet",
@@ -52,7 +55,7 @@
       "officeNumber": 803231231212,
       "isdCode": 91,
       "personalEmailId": "askansh@gmail.com",
-      "officialEmailId": "akansha@lowes.com"
+      "officialEmailId": "askansha@lowes.com"
     }
   }
 }

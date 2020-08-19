@@ -1,5 +1,6 @@
 {
   "officeId": 12345675,
+  "officeName": "Lowe's",
   "officeFloors": [{
     "floorNumber": 101,
     "floorName": "1FloorMeetingRoom",
@@ -9,28 +10,15 @@
       "roomType": "CONFERENCE",
       "available": true,
       "slots": [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
-      "lastUpdatedDate": {
-        "iLocalMillis": 1597708800000,
-        "iChronology": {
-          "iBase": {
-            "iMinDaysInFirstWeek": 4
-          }
-        }
-      }
+      "lastUpdatedDate": "2020-08-20"
     }, {
       "roomId": 701345,
+      "roomName": "WarRoom",
       "roomCapacity": 10,
       "roomType": "MEETING",
       "available": true,
       "slots": [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
-      "lastUpdatedDate": {
-        "iLocalMillis": 1597708800000,
-        "iChronology": {
-          "iBase": {
-            "iMinDaysInFirstWeek": 4
-          }
-        }
-      }
+      "lastUpdatedDate": "2020-08-20"
     }]
   }],
   "address": {
@@ -39,20 +27,8 @@
     "pinCode": "560078",
     "country": "India"
   },
-  "createDate": {
-    "iLocalMillis": 1597708800000,
-    "iChronology": {
-      "iBase": {
-        "iMinDaysInFirstWeek": 4
-      }
-    }
-  },
-  "lastUpdatedDate": {
-    "iLocalMillis": 1597708800000,
-    "iChronology": {
-      "iBase": {
-        "iMinDaysInFirstWeek": 4
-      }
-    }
-  }
+  "createDate": "2020-08-18",
+  "fromDate": "2020-08-18",
+  "toDate": "  2020-09-18"
+
 }
