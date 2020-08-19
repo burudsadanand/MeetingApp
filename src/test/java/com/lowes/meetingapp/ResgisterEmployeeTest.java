@@ -8,8 +8,9 @@ public class ResgisterEmployeeTest {
 
     @Test
     public void testRegisterEmployee(){
-        RegisterEmployeeResource registerEmployeeResource=new RegisterEmployeeResource();
-        EmployeeRequestBean employeeRequestBean=new EmployeeRequestBean();
+       /* RegisterEmployeeResource registerEmployeeResource=new RegisterEmployeeResource();
+        EmployeeRequestBean employeeRequestBean=new EmployeeRequestBean();*/
+
 
     }
 }

@@ -31,15 +31,12 @@ public class SearchScheduleMeetingService implements ISearchScheduledMeetingServ
     public ResponseBean<SearchMeetingResponse> fetchMeetings(SearchMeetingRequest searchMeetingRequests) throws BusinessServiceException {
         ResponseBean<SearchMeetingResponse> searchMeetingResponse=new ResponseBean<>();
         prepareResponseBean(searchMeetingResponse);
-        for(String email:searchMeetingRequests.getEmailIds()){
             try {
                 List<EmployeeCalendarDO> employeeCalendarDOS=employeeCalendorDao.getEmployeeCalendor(searchMeetingRequests.getEmailIds());
                 return buildResponse(employeeCalendarDOS,searchMeetingResponse);
             } catch (DAOException e) {
                throw new BusinessServiceException(e,ErrorEnum.INTERSERVER_ERROR);
             }
-        }
-        return searchMeetingResponse;
     }
 
     private void prepareResponseBean(ResponseBean<SearchMeetingResponse> searchMeetingResponse) {

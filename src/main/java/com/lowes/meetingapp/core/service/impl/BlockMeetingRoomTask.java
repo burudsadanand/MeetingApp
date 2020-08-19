@@ -72,8 +72,8 @@ public class BlockMeetingRoomTask implements Callable<ResponseBean<ScheduleMeeti
                                 slotAvailable=false;
                                 slots.add(i,false);
                             }
-                            meetingRoomDO.setSlots(slots);
                         }
+                        meetingRoomDO.setSlots(slots);
                         if(slotAvailable){
                             Long meetingId=IdGenerator.generateMeetingId();
                             blockMeetingRoom(officeRoomInventoryDO,roomInventoryId);

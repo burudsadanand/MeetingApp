@@ -20,7 +20,7 @@ public class RegisterEmployeeResource {
     private IEmployeeService employeeService;
 
     @PostMapping("/registerEmployee")
-    public ResponseEntity<ResponseBean<List<EmployeeRegisterResponseBean>>> registerEmployees(@RequestBody List<EmployeeRequestBean> employeeBean){
+    ResponseEntity<ResponseBean<List<EmployeeRegisterResponseBean>>> registerEmployees(@RequestBody List<EmployeeRequestBean> employeeBean){
         return new ResponseEntity<>(employeeService.registerEmployee(employeeBean),HttpStatus.OK);
     }
 }
