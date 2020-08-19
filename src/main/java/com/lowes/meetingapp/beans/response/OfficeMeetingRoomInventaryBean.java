@@ -1,5 +1,6 @@
 package com.lowes.meetingapp.beans.response;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.lowes.meetingapp.beans.request.OfficeFloorBean;
 import com.lowes.meetingapp.core.dao.beans.AddressDO;
 import lombok.Getter;
@@ -10,6 +11,7 @@ import java.util.List;
 
 @Getter
 @Setter
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class OfficeMeetingRoomInventaryBean extends  BaseResponse {
 
     private Long officeId;

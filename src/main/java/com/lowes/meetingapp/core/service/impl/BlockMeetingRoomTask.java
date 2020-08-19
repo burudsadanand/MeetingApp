@@ -15,6 +15,8 @@ import com.lowes.meetingapp.core.exception.DAOException;
 import com.lowes.meetingapp.utils.DateUtils;
 import com.lowes.meetingapp.utils.IdGenerator;
 import lombok.Builder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +25,7 @@ import java.util.concurrent.Callable;
 
 @Builder
 public class BlockMeetingRoomTask implements Callable<ResponseBean<ScheduleMeetingResponseBean>> {
+    public static final Logger logger=LoggerFactory.getLogger(BlockMeetingRoomTask.class);
 
     private MeetingRoomRequestBean meetingRoomRequestBean;
     private IScheduleMeetingDao scheduleMeetingDao;

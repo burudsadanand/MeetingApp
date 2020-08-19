@@ -1,6 +1,7 @@
 package com.lowes.meetingapp.core.dao.beans;
 
 import com.lowes.meetingapp.beans.request.EmployeeBean;
+import com.lowes.meetingapp.beans.request.SlotsBean;
 import lombok.Getter;
 import lombok.Setter;
 import org.joda.time.LocalDate;
@@ -25,5 +26,6 @@ public class MeetingInfoDO {
     private List<Boolean> slots;
     private List<EmployeeBean> guests;
     private AddressDO employeeAddress;
-
+    private SlotsBean slotBean;
+    private boolean meetingSchduled;
 }

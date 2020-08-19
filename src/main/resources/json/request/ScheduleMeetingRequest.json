@@ -12,8 +12,8 @@
   "toTime": "2020-08-20",
   "creationDate":"2020-08-20",
   "slot": {
-    "from": "11:00",
-    "to": "12:00"
+    "from": "03:00",
+    "to": "04:30"
   },
   "addressLocation": {
     "city": "Bangalore",
@@ -25,7 +25,7 @@
     "firstName": "Bhavesh",
     "lastName": "S",
     "employeeId": 123412134,
-    "contactBean": {
+    "contact": {
       "mobileNumber1": 9186453212,
       "officeNumber": 8084232332212,
       "isdCode": 91,
@@ -36,7 +36,7 @@
     "firstName": "Vignesh",
     "lastName": "S",
     "employeeId": 123412136,
-    "contactBean": {
+    "contact": {
       "mobileNumber1": 9321453212,
       "officeNumber": 53232332212,
       "isdCode": 91,
@@ -50,7 +50,7 @@
     "employeeId": 123412131,
     "firstName": "Akansha",
     "lastName": "Verma",
-    "contactBean": {
+    "contact": {
       "mobileNumber1": 928232321121,
       "officeNumber": 803231231212,
       "isdCode": 91,

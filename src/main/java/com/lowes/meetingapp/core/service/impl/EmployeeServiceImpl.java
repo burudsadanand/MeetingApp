@@ -6,7 +6,6 @@ import com.lowes.meetingapp.beans.response.Meta;
 import com.lowes.meetingapp.beans.response.ResponseBean;
 import com.lowes.meetingapp.beans.response.Status;
 import com.lowes.meetingapp.core.dao.beans.*;
-import com.lowes.meetingapp.core.dao.impl.OfficeRoomInventoryDao;
 import com.lowes.meetingapp.core.dao.interfaces.IEmployeeCalendorDao;
 import com.lowes.meetingapp.core.dao.interfaces.IEmployeeDao;
 import com.lowes.meetingapp.core.exception.BusinessServiceException;
@@ -26,7 +25,7 @@ import java.util.Map;
 
 @Service
 public class EmployeeServiceImpl implements IEmployeeService {
-    Logger logger=LoggerFactory.getLogger(OfficeRoomInventoryDao.class);
+    public static final Logger logger=LoggerFactory.getLogger(EmployeeServiceImpl.class);
 
 
     @Autowired
@@ -92,23 +91,23 @@ public class EmployeeServiceImpl implements IEmployeeService {
     }
 
     private void generateEmptyCalendor(Map<String,MeetingInfoDO> employeeCalendarMap,EmployeeDO employeeDO) {
-        MeetingInfoDO meetingInfoDO=new MeetingInfoDO();
-        meetingInfoDO.setOfficeId(employeeDO.getOfficeId());
-        AddressDO addressDO=new AddressDO();
-        meetingInfoDO.setEmployeeAddress(addressDO);
-        addressDO.setCity(employeeDO.getAddressDO().getCity());
-        addressDO.setCountry(employeeDO.getAddressDO().getCountry());
-        addressDO.setPinCode((employeeDO.getAddressDO().getPinCode()));
-        addressDO.setState(employeeDO.getAddressDO().getState());
-        List<Boolean> slots=new ArrayList<>();
-        for(int i=0; i<95; i++){
-            slots.add(true);
-        }
-        meetingInfoDO.setSlots(slots);
+
         List<LocalDate> getCaledorDates=DateUtils.generateCaledarDates(DateUtils.convertDateStringToLocalDate("2020-08-01"),
                                                                        DateUtils.convertDateStringToLocalDate("2020-09-30"));
         for(LocalDate localDate:getCaledorDates){
-
+            MeetingInfoDO meetingInfoDO=new MeetingInfoDO();
+            meetingInfoDO.setOfficeId(employeeDO.getOfficeId());
+            AddressDO addressDO=new AddressDO();
+            meetingInfoDO.setEmployeeAddress(addressDO);
+            addressDO.setCity(employeeDO.getAddressDO().getCity());
+            addressDO.setCountry(employeeDO.getAddressDO().getCountry());
+            addressDO.setPinCode((employeeDO.getAddressDO().getPinCode()));
+            addressDO.setState(employeeDO.getAddressDO().getState());
+            List<Boolean> slots=new ArrayList<>();
+            for(int i=0; i<95; i++){
+                slots.add(true);
+            }
+            meetingInfoDO.setSlots(slots);
             employeeCalendarMap.put(DateUtils.convertDateToString(localDate),meetingInfoDO);
         }
 

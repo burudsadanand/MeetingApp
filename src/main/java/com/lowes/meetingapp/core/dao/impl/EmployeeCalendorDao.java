@@ -37,7 +37,11 @@ public class EmployeeCalendorDao implements IEmployeeCalendorDao {
     public List<EmployeeCalendarDO> getEmployeeCalendor(List<String> emailIds) throws DAOException {
            List<EmployeeCalendarDO> employeeCalendorDOS=new ArrayList<>();
            emailIds.stream().forEach(emailId->{
-               employeeCalendorDOS.add(employeeCalendarDOMap.get(emailId));
+               EmployeeCalendarDO employeeCalendarDO=employeeCalendarDOMap.get(emailId);
+               if(employeeCalendarDO!=null){
+                   employeeCalendorDOS.add(employeeCalendarDO);
+               }
+
            });
 
         return employeeCalendorDOS;

@@ -41,6 +41,7 @@ public class ScheduleMeetingServiceImpl implements IScheduleMeetingService<Meeti
                         ResponseBean<MeetingResponseBean> meetingResponse=new ResponseBean<>();
                         meetingResponse.setResponse(scheduleMeetingResponseBean.getResponse().getMeetingResponseBean());
                         meetingResponse.setMeta(scheduleMeetingResponseBean.getMeta());
+                        meetingResponse.setErrorResponse(scheduleMeetingResponseBean.getErrorResponse());
                         return meetingResponse;
                     }
                 } catch (InterruptedException e) {

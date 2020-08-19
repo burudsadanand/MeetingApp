@@ -1,5 +1,6 @@
 package com.lowes.meetingapp.beans.request;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.lowes.meetingapp.core.dao.beans.RoomType;
 import lombok.Getter;
@@ -9,6 +10,7 @@ import java.util.List;
 
 @Getter
 @Setter
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class MeetingRoomRequestBean {
 
     private Long roomId;

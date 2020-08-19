@@ -9,6 +9,8 @@ import com.lowes.meetingapp.core.dao.interfaces.IEmployeeCalendorDao;
 import com.lowes.meetingapp.core.exception.DAOException;
 import com.lowes.meetingapp.utils.IdGenerator;
 import lombok.Builder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +18,7 @@ import java.util.concurrent.Callable;
 
 @Builder
 public class CheckEmployeeCalendorAvaibilityTask implements Callable<ResponseBean<ScheduleMeetingResponseBean>> {
-
+    public static final Logger logger=LoggerFactory.getLogger(CheckEmployeeCalendorAvaibilityTask.class);
 
     private IEmployeeCalendorDao employeeCalendorDao;
 
@@ -39,6 +41,7 @@ public class CheckEmployeeCalendorAvaibilityTask implements Callable<ResponseBea
         baseResponse.setStatus(Status.SUCCESS);
         if(!isEmployeeAvailable){
             baseResponse.setStatus(Status.FAILURE);
+            baseResponse.setErrorCode(ErrorCode.EMPLOYEE_UNAVAILBLE);
         }
         scheduleMeetingResponseBean.setErrorResponse(baseResponse);
         scheduleMeetingResponseBean.setMeta(meta);
@@ -66,12 +69,11 @@ public class CheckEmployeeCalendorAvaibilityTask implements Callable<ResponseBea
                 if(slots.get(startIndex)){
                     isEmployeeAvailable=true;
                     buildEmployeeAvailablityBean(employeeCalendarDO,employeeAvailabilityBean,isEmployeeAvailable);
-                    scheduleMeetingResponseBean.getResponse().getEmployeeAvailabilityBeanList().add(employeeAvailabilityBean);
                 }else{
                     buildEmployeeAvailablityBean(employeeCalendarDO,employeeAvailabilityBean,isEmployeeAvailable);
-                    scheduleMeetingResponseBean.getResponse().getEmployeeAvailabilityBeanList().add(employeeAvailabilityBean);
                 }
             }
+            scheduleMeetingResponseBean.getResponse().getEmployeeAvailabilityBeanList().add(employeeAvailabilityBean);
         }
         return isEmployeeAvailable;
 

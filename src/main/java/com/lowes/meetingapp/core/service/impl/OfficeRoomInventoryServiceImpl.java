@@ -13,6 +13,8 @@ import com.lowes.meetingapp.core.exception.BusinessServiceException;
 import com.lowes.meetingapp.core.exception.DAOException;
 import com.lowes.meetingapp.core.service.interfaces.IOfficeRoomInventoryService;
 import com.lowes.meetingapp.utils.DateUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +23,7 @@ import java.util.List;
 
 @Service
 public class OfficeRoomInventoryServiceImpl implements IOfficeRoomInventoryService<RoomInventoryResponse> {
+    public static final Logger logger=LoggerFactory.getLogger(OfficeRoomInventoryServiceImpl.class);
 
     @Autowired
     private IOfficeRoomInventoryDao officeRegisterDao;
