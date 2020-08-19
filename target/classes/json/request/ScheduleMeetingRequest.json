@@ -1,0 +1,58 @@
+{
+  "roomId": 701345,
+  "officeId": 12345675,
+  "roomName": "WarRoom",
+  "roomCapacity": 20,
+  "floorNumber": 101,
+  "roomType": "CONFERENCE",
+  "available": true,
+  "fromDate": "2020-08-20",
+  "toDate": "2020-08-20",
+  "fromTime": "2020-08-20",
+  "toTime": "2020-08-20",
+  "slot": {
+    "from": "11:00",
+    "to": "12:00"
+  },
+  "addressBean": {
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "pinCode": "560078",
+    "country": "India"
+  },
+  "employeeBeanList": [{
+    "firstName": "Bhavesh",
+    "lastName": "S",
+    "contactBean": {
+      "mobileNumber1": 9186453212,
+      "officeNumber": 8084232332212,
+      "isdCode": 91,
+      "personalEmailId": "bhavesh@gmail.com",
+      "officialEmailId": "bhavesh@lowes.com"
+    }
+  }, {
+    "firstName": "Bhavesh",
+    "lastName": "S",
+    "contactBean": {
+      "mobileNumber1": 9186453212,
+      "officeNumber": 8084232332212,
+      "isdCode": 91,
+      "personalEmailId": "bhavesh@gmail.com",
+      "officialEmailId": "bhavesh@lowes.com"
+    }
+  }],
+  "meetingTitle": "Interview|Lead Engineer| Program Assignmenet",
+  "description": " Final Roudnd of Interview with Sadanand",
+  "organizer": {
+    "employeeId": 123412131,
+    "firstName": "Akansha",
+    "lastName": "Verma",
+    "contactBean": {
+      "mobileNumber1": 928232321121,
+      "officeNumber": 803231231212,
+      "isdCode": 91,
+      "personalEmailId": "askansh@gmail.com",
+      "officialEmailId": "akansha@lowes.com"
+    }
+  }
+}

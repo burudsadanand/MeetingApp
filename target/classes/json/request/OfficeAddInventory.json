@@ -1,0 +1,58 @@
+{
+  "officeId": 12345675,
+  "officeFloors": [{
+    "floorNumber": 101,
+    "floorName": "1FloorMeetingRoom",
+    "meetingRooms": [{
+      "roomId": 701346,
+      "roomCapacity": 20,
+      "roomType": "CONFERENCE",
+      "available": true,
+      "slots": [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+      "lastUpdatedDate": {
+        "iLocalMillis": 1597708800000,
+        "iChronology": {
+          "iBase": {
+            "iMinDaysInFirstWeek": 4
+          }
+        }
+      }
+    }, {
+      "roomId": 701345,
+      "roomCapacity": 10,
+      "roomType": "MEETING",
+      "available": true,
+      "slots": [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],
+      "lastUpdatedDate": {
+        "iLocalMillis": 1597708800000,
+        "iChronology": {
+          "iBase": {
+            "iMinDaysInFirstWeek": 4
+          }
+        }
+      }
+    }]
+  }],
+  "address": {
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "pinCode": "560078",
+    "country": "India"
+  },
+  "createDate": {
+    "iLocalMillis": 1597708800000,
+    "iChronology": {
+      "iBase": {
+        "iMinDaysInFirstWeek": 4
+      }
+    }
+  },
+  "lastUpdatedDate": {
+    "iLocalMillis": 1597708800000,
+    "iChronology": {
+      "iBase": {
+        "iMinDaysInFirstWeek": 4
+      }
+    }
+  }
+}
